@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.akkessler.pspider.MainActivity" >
+
+    <EditText
+        android:id="@+id/txtSeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Seed URL (text)"
+        android:text="www.sheldonbrown.com" >
+
+        <requestFocus />
+    </EditText>
+
+    <!-- 
+    <EditText
+        android:id="@+id/txtKeywords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSeed"
+        android:ems="10"
+        android:hint="Keyword (text)"
+        android:text="academics" />
+    
+    <EditText android:id="@+id/txtPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtKeywords"
+        android:ems="10"
+        android:hint="Port (integer)"
+        android:text="80" />
+    
+    <EditText
+        android:id="@+id/txtRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPort"
+        android:ems="10"
+        android:hint="Request (text)"
+        android:text="GET / HTTP/1.1\r\nHost: illinois.edu\r\n\r\n" />
+	-->
+    <EditText
+        android:id="@+id/txtDepth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSeed"
+        android:ems="10"
+        android:hint="Depth (integer)"
+        android:inputType="number"
+        android:text="2" />
+
+    <EditText
+        android:id="@+id/txtSpiders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDepth"
+        android:ems="10"
+        android:hint="Spider Count (integer)"
+        android:inputType="number"
+        android:text="3" />
+
+    <Button
+        android:id="@+id/btnCrawl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSpiders"
+        android:text="Crawl" />
+    
+    <EditText
+        android:id="@+id/debug"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/btnCrawl"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="true" />
+     
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCrawl" >
+
+    </ListView>
+
+</RelativeLayout>
